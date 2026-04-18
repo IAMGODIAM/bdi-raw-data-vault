@@ -1,0 +1,21 @@
+{
+  "database": "Slave Voyages Database \u2014 slavevoyages.org (2022 edition)",
+  "period": "1514\u20131866",
+  "total_voyages_documented": 36000,
+  "total_africans_forcibly_transported": 12521337,
+  "total_africans_who_died_in_transit": 1800000,
+  "disembarkation_americas": 10700000,
+  "peak_decade": "1780s",
+  "peak_decade_volume": 750000,
+  "primary_origins": [
+    "West Central Africa (Kongo, Angola) \u2014 5.7M",
+    "Senegambia \u2014 760K",
+    "Sierra Leone \u2014 388K",
+    "Gold Coast \u2014 1.2M",
+    "Bight of Benin \u2014 2.0M",
+    "Bight of Biafra \u2014 1.6M"
+  ],
+  "us_imports_total": 389000,
+  "note": "US represents ~3% of total transatlantic slave trade. US enslaved population grew via natural increase \u2014 from 389K imported to 4M by 1860.",
+  "source": "Slave Voyages: The Trans-Atlantic Slave Trade Database, slavevoyages.org, Emory University (Eltis, Richardson et al.)"
+}
