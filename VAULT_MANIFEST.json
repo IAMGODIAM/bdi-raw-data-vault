@@ -1,6 +1,6 @@
 {
   "vault": "BDI Raw Data Vault",
-  "version": "3.0-comprehensive",
+  "version": "v3.1",
   "dag": "bdi-vault-v3-comprehensive-2026-0418",
   "publisher": "E5 Enclave Incorporated | EIN 99-3822441",
   "license": "CC0 1.0 Universal \u2014 Public Domain",
@@ -151,5 +151,12 @@
     "reports/REPORT_1_SCIENTIFIC_RAW.md \u2014 Empirical record, all sources, formulas, citations",
     "reports/REPORT_2_ANALYTICAL_READING.md \u2014 Structural analysis across all pillars",
     "reports/REPORT_3_BLACK_PAPER_ADJUSTMENTS.md \u2014 9 adjustments to Black Paper manuscript"
+  ],
+  "last_updated": "2026-04-18T20:00:00Z",
+  "changes_v3_1": [
+    "Removed 0KB duplicate: economic/bls_unemployment_by_race_RAW.json",
+    "Restored historical/slavevoyages_1514-1866_aggregate_RAW.json (was empty)",
+    "Added dual_source_log.json \u2014 per-series verification log",
+    "Corrected active file count"
   ]
 }
