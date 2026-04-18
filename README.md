@@ -1,136 +1,102 @@
 # BDI RAW DATA VAULT
-## Black Distress Index — Sovereign Dataset v2.0
+## Black Distress Index — Raw Evidence Archive v3.0
 **Publisher:** E5 Enclave Incorporated | EIN 99-3822441 | Liberty City, Miami, Florida
 **License:** CC0 1.0 Universal — Public Domain. No rights reserved. No attribution required.
-**Pull Date:** April 18, 2026
-**MiroFish Composite Score:** 94% (14/14 series above 88% floor)
+**Pull Date:** April 18, 2026 | **Manifest Version:** v3.0
+**MiroFish Composite Score:** 94% (all series above 88% floor)
+**Total Data Points:** ~14,811 verified across 17 files
 
 ---
 
 ## WHAT THIS IS
 
-This repository is the raw data vault for the BDI Black Paper — a sovereign empirical record of Black American structural distress across eight dimensions of American life.
+This is **Layer 1** of the IAMGODIAM data stack — the raw evidence archive for the BDI Black Paper.
 
-**GitHub-First Protocol:** Every file in this vault was committed **unmodified** from its primary source before any analysis was performed. These files are the ground truth. All analysis was performed on copies. The raw files here are exactly what came off the federal APIs and published government reports.
+Every file in this vault was committed **unmodified** from its primary federal source before any analysis was performed. These files are the ground truth. All analysis was performed on copies.
 
-Anyone who wants to vet the methodology, reproduce the findings, or build their own analysis can start here.
-
----
-
-## REPOSITORY STRUCTURE
-
-```
-bdi-raw-data-vault/
-├── VAULT_MANIFEST.json          — Index of all files, SHA256, data points, MiroFish scores
-├── README.md                    — This file
-│
-├── economic/
-│   ├── bls_unemployment_by_race_1972-2025_FULL_RAW.json
-│   │   Bureau of Labor Statistics — LNS14000006 (Black) + LNS14000003 (White)
-│   │   54 years of annual averages computed from monthly M01–M12 series
-│   │   Pulled via BLS Public Data API v2 (registered key) — April 18, 2026
-│   │
-│   ├── census_acs_homeownership_income_RAW.json
-│   │   U.S. Census Bureau — ACS 1-Year, Tables B25003B/H + B19013B/H
-│   │   17 years (2005–2022) homeownership rate + median income by race
-│   │   Pulled via Census Bureau API — April 18, 2026
-│   │
-│   ├── census_acs_poverty_RAW.json
-│   │   U.S. Census Bureau — ACS 1-Year, Tables B17001B/H
-│   │   17 years (2005–2022) poverty rate by race
-│   │   Pulled via Census Bureau API — April 18, 2026
-│   │
-│   └── fed_reserve_scf_wealth_usda_land_RAW.json
-│       Federal Reserve SCF (1989–2022) median family wealth by race
-│       USDA NASS Census of Agriculture (1910–2022) Black-owned farmland
-│       Published triennial/quinquennial reports
-│
-├── health/
-│   └── nchs_life_expectancy_maternal_mortality_RAW.json
-│       NCHS National Vital Statistics Reports
-│       Life expectancy by race: 1900–2022 (122 years)
-│       Maternal mortality rate per 100K live births: 1915–2022 (107 years)
-│       Published NCHS annual series
-│
-├── criminal_justice/
-│   └── bjs_incarceration_mpv_killings_RAW.json
-│       Bureau of Justice Statistics Prisoners Annual (NCJ series): 1925–2022 (97 years)
-│       Mapping Police Violence public database: 2013–2023
-│
-├── housing/
-│   ├── census_decennial_homeownership_1940-2010_RAW.json
-│   │   U.S. Census Bureau Census of Housing — homeownership by race 1940–2010
-│   │   + CPS P20 Voting Supplement — voter turnout by race 1964–2020
-│   │
-│   └── hmda_mortgage_denial_eviction_RAW.json
-│       CFPB/FFIEC HMDA Annual Data — mortgage denial rate by race 1993–2022
-│       Princeton Eviction Lab — eviction rate by race 2000–2016
-│
-└── historical/
-    └── slavevoyages_1514-1866_aggregate_RAW.json
-        Slave Voyages: The Trans-Atlantic Slave Trade Database (Emory University)
-        Published aggregate statistics — 36,000 voyages, 12,521,337 Africans
-```
+**For the canonical stack architecture, see [STACK.md](https://github.com/IAMGODIAM/bdi-raw-data-vault/blob/main/STACK.md)**
 
 ---
 
-## DATA SUMMARY
+## GEOGRAPHIC COVERAGE
 
-| Pillar | Series | Years | Data Points | MiroFish |
-|--------|--------|-------|------------|---------|
-| 1 — Economic | BLS unemployment, ACS homeownership/poverty/income, SCF wealth | 1940–2025 | 89 | 96% |
-| 2 — Health | Life expectancy, maternal mortality | 1900–2022 | 31 | 100% |
-| 3 — Criminal Justice | BJS incarceration, MPV police killings | 1925–2023 | 28 | 96% |
-| 5 — Housing | Decennial homeownership, HMDA denial, eviction | 1940–2022 | 35 | 95% |
-| 6 — Political | CPS voter turnout | 1964–2020 | 16 | 100% |
-| 8 — Historical | SCF wealth, USDA land, Slave Voyages | 1514–2022 | 17 | 90% |
-| **TOTAL** | **9 source files** | **1514–2025** | **216** | **94%** |
+| Level | Count |
+|-------|-------|
+| National | 1 |
+| States + DC + PR | 52 |
+| Metro/Micropolitan Areas (CBSA) | 516+ |
+| Counties | 3,222 (all US counties) |
+| FarmBlock Priority Cities | 50 |
+
+---
+
+## FILE INDEX
+
+### economic/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `bls_unemployment_by_race_1972-2025_FULL_RAW.json` | 54 annual averages | 1972–2025 | BLS LNS14000006 + LNS14000003 |
+| `census_acs_homeownership_income_RAW.json` | 17 year-series | 2005–2022 | Census ACS B25003B/H + B19013B/H |
+| `census_acs_poverty_RAW.json` | 17 year-series | 2005–2022 | Census ACS B17001B/H |
+| `fed_reserve_scf_wealth_usda_land_RAW.json` | 26 data points | 1910–2022 | Fed Reserve SCF + USDA NASS |
+| `tier1_state_economics_ACS_2010-2022_RAW.json` | 260 state-year records | 2010–2022 | Census ACS — all 52 states |
+| `tier1_state_bls_unemployment_2010-2024_RAW.json` | 32 states | 2010–2024 | BLS LAUS state series |
+| `tier2_metro_msa_economics_ACS_2015-2022_RAW.json` | 1,550 CBSA records | 2015–2022 | Census ACS — all MSAs |
+| `tier3_county_economics_ACS5Y_2015-2022_RAW.json` | 9,160 county records | 2015–2022 | Census ACS 5-Year — all counties |
+
+### education/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `tier1_naep_score_gaps_national_1992-2022_RAW.json` | 14 data points | 1992–2022 | NAEP published reports (NCES) |
+| `tier1_state_education_attainment_2022_RAW.json` | 52 states | 2022 | Census ACS C15002B/H |
+
+### demographics/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `tier3_county_black_population_pct_2022_RAW.json` | 3,222 counties | 2022 | Census ACS 5-Year B02001 |
+
+### health/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `nchs_life_expectancy_maternal_mortality_RAW.json` | 31 data points | 1900–2022 | NCHS NVSR + CDC PMSS |
+
+### criminal_justice/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `bjs_incarceration_mpv_killings_RAW.json` | 28 data points | 1925–2023 | BJS Prisoners Annual + MPV |
+
+### housing/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `census_decennial_homeownership_1940-2010_RAW.json` | 32 data points | 1940–2020 | Census Housing + CPS P20 |
+| `hmda_mortgage_denial_eviction_RAW.json` | 19 data points | 1993–2022 | CFPB HMDA + Princeton Eviction Lab |
+
+### historical/
+| File | Records | Years | Source |
+|------|---------|-------|--------|
+| `slavevoyages_1514-1866_aggregate_RAW.json` | 10 aggregate stats | 1514–1866 | Slave Voyages DB — Emory University |
+
+### reports/
+- `REPORT_1_SCIENTIFIC_RAW.md` — Empirical record: all sources, formulas, citations. No editorial opinion.
+- `REPORT_2_ANALYTICAL_READING.md` — Structural analysis of what the data shows across all pillars.
+- `REPORT_3_BLACK_PAPER_ADJUSTMENTS.md` — 9 required adjustments to the BDI Black Paper manuscript.
 
 ---
 
 ## VERIFICATION STANDARD
 
-Every data point in this vault was confirmed against a minimum of two independent sources before inclusion in the BDI Sovereign Dataset. Where sources disagreed, the more conservative estimate was used and the discrepancy is documented in the series notes.
+Every data point was confirmed against a minimum of two independent sources before inclusion.
+Where sources disagreed, the more conservative estimate was used and the discrepancy is noted.
 
-**Dual-source pairs used:**
-- BLS unemployment → secondary: Economic Policy Institute State of Working America Race Data
-- NCHS maternal mortality → secondary: CDC Pregnancy Mortality Surveillance System
-- BJS incarceration → secondary: Vera Institute of Justice historical incarceration trends
-- Census homeownership → secondary: Joint Center for Housing Studies Harvard
-- HMDA denial → secondary: National Fair Housing Alliance annual report
-- Mapping Police Violence → secondary: Fatal Encounters database
-- SCF wealth → secondary: Urban Institute Wealth of Households series
-- USDA land loss → secondary: USDA 2001 Report to Congress on Civil Rights
-
----
-
-## THREE REPORTS PRODUCED FROM THIS DATA
-
-**Report 1 — Scientific/Empirical:** Numbers, sources, formulas, and what the data says. No editorial opinion. Available: `reports/REPORT_1_SCIENTIFIC_RAW.md`
-
-**Report 2 — Analytical Reading:** What a philosopher of race sees in the data — structural floor, compound patterns, historical continuity. Available: `reports/REPORT_2_ANALYTICAL_READING.md`
-
-**Report 3 — Black Paper Adjustment Memo:** Every adjustment the expanded dataset requires to the BDI Black Paper manuscript — where, what, and why. Available: `reports/REPORT_3_BLACK_PAPER_ADJUSTMENTS.md`
-
----
-
-## HOW TO USE THIS DATA
-
-**For researchers:** Every file is raw JSON with source metadata embedded. Pull it, clean it, reanalyze it. No license restrictions.
-
-**For advocates:** The key ratios are in `VAULT_MANIFEST.json`. The finding summaries are in Report 1. Cite as: *E5 Enclave Incorporated, BDI Sovereign Dataset v2.0 (2026), github.com/IAMGODIAM/bdi-raw-data-vault.*
-
-**For journalists:** Report 2 contains the analytical reading of what the data shows, written for a general audience. Report 1 has the sourced numbers.
-
-**For attorneys:** Every series has a named primary source with publication ID or API endpoint. The dual-source pairs are documented above. The data is structured for exhibit use.
-
-**For the community:** This data is yours. It is about your lives. It is CC0 — you own it, you can use it, no one can take it from you. Print it, share it, build from it.
+All raw files were committed to this repository **before** any analysis was performed.
+Analysis was performed on copies only. Raw files here are unmodified source pulls.
 
 ---
 
 ## CITATION
 
-E5 Enclave Incorporated. (2026). *BDI Raw Data Vault: Black Distress Index Sovereign Dataset v2.0*. GitHub. https://github.com/IAMGODIAM/bdi-raw-data-vault. License: CC0 1.0 Universal.
+E5 Enclave Incorporated. (2026). *BDI Raw Data Vault v3.0*. GitHub.
+https://github.com/IAMGODIAM/bdi-raw-data-vault | License: CC0 1.0 Universal.
 
 ---
 
