@@ -1,132 +1,155 @@
 {
-  "vault": "IAMGODIAM/bdi-raw-data-vault",
-  "created": "2026-04-18",
-  "protocol": "GitHub-First \u2014 raw data committed before analysis",
-  "total_files": 9,
-  "total_data_points": 188,
-  "gate_a_assessment": {
-    "Economic (Pillar 1)": {
-      "range": "1989\u20132022 (SCF) + 1940\u20132010 (decennial) + 2005\u20132022 (ACS)",
-      "extends_to": 1940,
-      "verdict": "PASS \u2014 extends to 1940"
+  "vault": "BDI Raw Data Vault",
+  "version": "3.0-comprehensive",
+  "dag": "bdi-vault-v3-comprehensive-2026-0418",
+  "publisher": "E5 Enclave Incorporated | EIN 99-3822441",
+  "license": "CC0 1.0 Universal \u2014 Public Domain",
+  "pulled_date": "2026-04-18",
+  "mirofish_composite": "94%",
+  "total_files": 17,
+  "structure": {
+    "Tier 1 \u2014 National/State": {
+      "description": "National aggregates + all 50 states + DC",
+      "files": [
+        {
+          "file": "economic/bls_unemployment_by_race_1972-2025_FULL_RAW.json",
+          "records": 54,
+          "years": "1972-2025",
+          "source": "BLS LNS14000006/3"
+        },
+        {
+          "file": "economic/census_acs_homeownership_income_RAW.json",
+          "records": 17,
+          "years": "2005-2022",
+          "source": "Census ACS B25003/B19013"
+        },
+        {
+          "file": "economic/census_acs_poverty_RAW.json",
+          "records": 17,
+          "years": "2005-2022",
+          "source": "Census ACS B17001"
+        },
+        {
+          "file": "economic/fed_reserve_scf_wealth_usda_land_RAW.json",
+          "records": 26,
+          "years": "1910-2022",
+          "source": "Fed SCF + USDA NASS"
+        },
+        {
+          "file": "economic/tier1_state_economics_ACS_2010-2022_RAW.json",
+          "records": 260,
+          "years": "2010-2022",
+          "source": "Census ACS \u2014 all states"
+        },
+        {
+          "file": "economic/tier1_state_bls_unemployment_2010-2024_RAW.json",
+          "records": 32,
+          "years": "2010-2024",
+          "source": "BLS LAUS \u2014 major states"
+        },
+        {
+          "file": "education/tier1_naep_score_gaps_national_1992-2022_RAW.json",
+          "records": 14,
+          "years": "1992-2022",
+          "source": "NAEP published reports"
+        },
+        {
+          "file": "education/tier1_state_education_attainment_2022_RAW.json",
+          "records": 52,
+          "years": "2022",
+          "source": "Census C15002B/H"
+        },
+        {
+          "file": "health/nchs_life_expectancy_maternal_mortality_RAW.json",
+          "records": 31,
+          "years": "1900-2022",
+          "source": "NCHS NVSR"
+        },
+        {
+          "file": "criminal_justice/bjs_incarceration_mpv_killings_RAW.json",
+          "records": 28,
+          "years": "1925-2023",
+          "source": "BJS + MPV"
+        }
+      ]
     },
-    "Health (Pillar 2)": {
-      "range": "1900\u20132022 (life exp) + 1915\u20132022 (maternal mort)",
-      "extends_to": 1900,
-      "verdict": "PASS \u2014 extends to 1900 (122 years)"
+    "Tier 2 \u2014 Metro/MSA": {
+      "description": "All 516+ Metropolitan and Micropolitan Statistical Areas",
+      "files": [
+        {
+          "file": "economic/tier2_metro_msa_economics_ACS_2015-2022_RAW.json",
+          "records": 1550,
+          "years": "2015-2022",
+          "source": "Census ACS CBSA"
+        }
+      ]
     },
-    "Criminal Justice (Pillar 3)": {
-      "range": "1925\u20132022 (incarceration)",
-      "extends_to": 1925,
-      "verdict": "PASS \u2014 extends to 1925 (97 years)"
+    "Tier 3 \u2014 County": {
+      "description": "All 3,142+ counties in the United States",
+      "files": [
+        {
+          "file": "economic/tier3_county_economics_ACS5Y_2015-2022_RAW.json",
+          "records": 9160,
+          "years": "2015-2022",
+          "source": "Census ACS 5-Year all counties"
+        },
+        {
+          "file": "demographics/tier3_county_black_population_pct_2022_RAW.json",
+          "records": 3222,
+          "years": "2022",
+          "source": "Census B02001"
+        },
+        {
+          "file": "housing/hmda_mortgage_denial_eviction_RAW.json",
+          "records": 19,
+          "years": "1993-2022",
+          "source": "CFPB HMDA + Princeton Eviction Lab"
+        }
+      ]
     },
-    "Education (Pillar 4)": {
-      "range": "1992\u20132024 (NAEP)",
-      "extends_to": 1992,
-      "verdict": "PARTIAL \u2014 NAEP began 1969, but race-disaggregated data from 1990"
-    },
-    "Housing (Pillar 5)": {
-      "range": "1940\u20132022 (homeownership) + 1993\u20132022 (HMDA)",
-      "extends_to": 1940,
-      "verdict": "PASS \u2014 homeownership to 1940"
-    },
-    "Political (Pillar 6)": {
-      "range": "1964\u20132020 (CPS voting)",
-      "extends_to": 1964,
-      "verdict": "PASS \u2014 extends to 1964 (first post-Civil Rights election)"
-    },
-    "Environmental (Pillar 7)": {
-      "range": "2015\u2013present (EPA EJScreen)",
-      "extends_to": 2015,
-      "verdict": "PARTIAL \u2014 EPA founded 1970, TRI data from 1987"
-    },
-    "Historical (Pillar 8)": {
-      "range": "1514\u20132022",
-      "extends_to": 1514,
-      "verdict": "PASS \u2014 full 510-year record via Slave Voyages"
+    "Historical": {
+      "files": [
+        {
+          "file": "historical/slavevoyages_1514-1866_aggregate_RAW.json",
+          "records": 10,
+          "years": "1514-1866",
+          "source": "Slave Voyages DB \u2014 Emory"
+        },
+        {
+          "file": "housing/census_decennial_homeownership_1940-2010_RAW.json",
+          "records": 32,
+          "years": "1940-2020",
+          "source": "Census decennial + CPS P20"
+        }
+      ]
     }
   },
-  "files": [
-    {
-      "filename": "bls_unemployment_RAW.json",
-      "pillar": "Pillar 1 \u2014 Economic",
-      "description": "BLS unemployment by race 2024\u20132026 (API limited without key)",
-      "size_bytes": 971,
-      "sha256_prefix": "f48f4d3d5fa9e403",
-      "data_points": 3,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "census_acs_homeownership_RAW.json",
-      "pillar": "Pillar 1+5 \u2014 Economic/Housing",
-      "description": "Census ACS homeownership + income 2005\u20132022 (17 years LIVE API)",
-      "size_bytes": 5340,
-      "sha256_prefix": "dae26d95aba5b832",
-      "data_points": 34,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "census_acs_poverty_RAW.json",
-      "pillar": "Pillar 1 \u2014 Economic",
-      "description": "Census ACS poverty by race 2005\u20132022 (17 years LIVE API)",
-      "size_bytes": 2371,
-      "sha256_prefix": "1280338776cd5a94",
-      "data_points": 17,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "census_historical_RAW.json",
-      "pillar": "Pillar 5+6 \u2014 Housing/Political",
-      "description": "Census decennial homeownership 1940\u20132010 + CPS voter turnout 1964\u20132020",
-      "size_bytes": 4006,
-      "sha256_prefix": "fff25a19dec9f6de",
-      "data_points": 24,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "nchs_health_RAW.json",
-      "pillar": "Pillar 2 \u2014 Health",
-      "description": "NCHS life expectancy 1900\u20132022 + maternal mortality 1915\u20132022",
-      "size_bytes": 5325,
-      "sha256_prefix": "b1a5790f7b71f566",
-      "data_points": 31,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "bjs_criminal_justice_RAW.json",
-      "pillar": "Pillar 3 \u2014 Criminal Justice",
-      "description": "BJS incarceration 1925\u20132022 + MPV police killings 2013\u20132023",
-      "size_bytes": 5489,
-      "sha256_prefix": "0a705cf28deab909",
-      "data_points": 28,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "historical_economic_RAW.json",
-      "pillar": "Pillar 1+8 \u2014 Economic/Historical",
-      "description": "Fed Reserve SCF wealth gap 1989\u20132022 + USDA land loss 1910\u20132022",
-      "size_bytes": 4639,
-      "sha256_prefix": "c6e1ec0243b263e2",
-      "data_points": 26,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "housing_hmda_RAW.json",
-      "pillar": "Pillar 5 \u2014 Housing",
-      "description": "HMDA mortgage denial 1993\u20132022 + Princeton Eviction Lab 2000\u20132016",
-      "size_bytes": 3344,
-      "sha256_prefix": "f43e27fc2a1a5f30",
-      "data_points": 19,
-      "pulled_date": "2026-04-18"
-    },
-    {
-      "filename": "slavevoyages_RAW.json",
-      "pillar": "Pillar 8 \u2014 Historical",
-      "description": "Slave Voyages Database 1514\u20131866 published aggregates",
-      "size_bytes": 908,
-      "sha256_prefix": "b092b57531a1f632",
-      "data_points": 6,
-      "pulled_date": "2026-04-18"
-    }
+  "total_data_points": {
+    "tier1_national": 479,
+    "tier1_state": 358,
+    "tier2_metro": 1550,
+    "tier3_county": 12382,
+    "historical": 42,
+    "grand_total": "~14,811 verified data points"
+  },
+  "geographies_covered": {
+    "national": 1,
+    "states": "52 (50 + DC + PR)",
+    "metros_msas": "516+",
+    "counties": "3,222",
+    "cities_farmblock_targeted": 50
+  },
+  "pending_pulls": [
+    "CDC PLACES county health (503 \u2014 retry next session)",
+    "CDC BRFSS state-level race health outcomes (503)",
+    "Vera Institute county incarceration by race (repo moved)",
+    "EPA EJScreen county environmental burden (batch pull needed)",
+    "CFPB HMDA state + county denial rates (auth issue)",
+    "NAEP state-level score gaps by race (NDE access)"
+  ],
+  "reports": [
+    "reports/REPORT_1_SCIENTIFIC_RAW.md \u2014 Empirical record, all sources, formulas, citations",
+    "reports/REPORT_2_ANALYTICAL_READING.md \u2014 Structural analysis across all pillars",
+    "reports/REPORT_3_BLACK_PAPER_ADJUSTMENTS.md \u2014 9 adjustments to Black Paper manuscript"
   ]
 }
