@@ -1,0 +1,30 @@
+{
+  "source": "U.S. Bureau of Labor Statistics \u2014 Public API v1",
+  "series_black": "LNS14000006 \u2014 Black/African American Unemployment Rate (seasonally adjusted, annual average)",
+  "series_white": "LNS14000003 \u2014 White Unemployment Rate (seasonally adjusted, annual average)",
+  "pulled_date": "2026-04-18",
+  "pillar": "1 \u2014 Economic Justice",
+  "data_points": 3,
+  "year_range": "2024\u20132026",
+  "finding_preview": "Black unemployment has been 1.663x\u20132.008x white unemployment every year since 2024",
+  "series": [
+    {
+      "year": 2024,
+      "black_unemployment_pct": 5.97,
+      "white_unemployment_pct": 3.59,
+      "black_white_ratio": 1.663
+    },
+    {
+      "year": 2025,
+      "black_unemployment_pct": 6.9,
+      "white_unemployment_pct": 3.73,
+      "black_white_ratio": 1.85
+    },
+    {
+      "year": 2026,
+      "black_unemployment_pct": 7.37,
+      "white_unemployment_pct": 3.67,
+      "black_white_ratio": 2.008
+    }
+  ]
+}
