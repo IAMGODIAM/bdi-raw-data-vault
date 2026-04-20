@@ -11,7 +11,7 @@
 | Repo | Role | Cite For |
 |------|------|----------|
 | `bdi-raw-data-vault` | **Raw evidence archive** — federal API pulls, unmodified, CC0 | Provenance, reproducibility, methodology verification |
-| `bdi-sovereign-dataset` | **Synthesized flagship dataset** — 8-pillar, 1,855 points, 1514–2024 | Primary citation for Black Paper argument |
+| `bdi-sovereign-dataset` | **Synthesized flagship dataset** — 8-pillar, 1,574 verified observations, 1514–2024 | Primary citation for Black Paper argument |
 | `farmblock-dataset` | **County publication layer** — Phase 2 scored counties, FDI composite | FarmBlock geographic targeting, county-level intervention siting |
 | `farmblock-data` | **Tract operational layer** — 12,426 tracts, 53 counties, deployment scoring | Place-based program deployment, census tract precision |
 
@@ -55,7 +55,7 @@
 **Published files:**
 | Path | Records | Status |
 |------|---------|--------|
-| `bdi_sovereign_dataset_v1.json` | 1,855 data points | ✅ Sealed |
+| `bdi_sovereign_dataset_v1.json` | 1,574 verified observations | ✅ Sealed |
 | `SEAL_CERTIFICATE.txt` | — | ✅ On-chain seal |
 | `LICENSE` | CC0 | ✅ |
 
