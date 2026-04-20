@@ -63,8 +63,6 @@ Each built on the last. Each was met with resistance, then partial acknowledgmen
 
 # Chapter 2 — The Data Gap: What Has Never Been Built
 
-THE DATA GAP: WHAT HAS NEVER BEEN BUILT
-
 The tradition documented in Chapter 1 has never lacked for moral clarity. What it has lacked, at every stage, is a single instrument that could make the full scope of the wound legible in one place — empirically comprehensive, structurally organized, freely available, requiring no institutional affiliation to access, produced by and accountable to the communities at the center of the data. That instrument did not exist before this paper. This chapter explains precisely what was missing and why.
 
 ## The Government Record: Rigorous and Fragmented
