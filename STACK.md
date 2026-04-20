@@ -23,7 +23,7 @@ They are not duplicates. Each has a distinct role. Cite the correct layer for yo
 ### Layer 2 — Synthesized Flagship Dataset
 **Repo:** `IAMGODIAM/bdi-sovereign-dataset`
 **What it is:** The Black Distress Index — a unified 8-pillar instrument spanning 1514–2024. This is the canonical citation target for the BDI Black Paper.
-**What it contains:** 1,855 dual-source-verified data points across 8 pillars: Economic, Health, Criminal Justice, Education, Housing, Political, Environmental, Historical.
+**What it contains:** 1,574 dual-source-verified data points across 8 pillars: Economic, Health, Criminal Justice, Education, Housing, Political, Environmental, Historical.
 **Cite this for:** The Black Paper argument. Grant applications. Academic citation. Media citation.
 
 ---
