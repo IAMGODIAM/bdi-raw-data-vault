@@ -14,7 +14,7 @@ The numbers in this paper do not lie. They do not speculate. They do not advocat
 
 They record.
 
-Thirty-three years. Eight dimensions of American life. Seventeen priority states. Fifty cities. Five compound catastrophe zones where every pillar of structural distress has collapsed simultaneously. One thousand, eight hundred and fifty-five data points, each dual-source verified, each one the residue of a decision someone made, a law someone passed, a contract someone awarded, a neighborhood someone planned to destroy. The question before every person who holds this paper is no longer whether the wound is real. The data settled that. The question is what you intend to do now that you know.
+Thirty-three years. Eight dimensions of American life. Seventeen priority states. Fifty cities. Five compound catastrophe zones where every pillar of structural distress has collapsed simultaneously. One thousand, five hundred and seventy-four data points, each dual-source verified, each one the residue of a decision someone made, a law someone passed, a contract someone awarded, a neighborhood someone planned to destroy. The question before every person who holds this paper is no longer whether the wound is real. The data settled that. The question is what you intend to do now that you know.
 
 ## What the Data Established
 
