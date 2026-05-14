@@ -1,4 +1,17 @@
 # BDI RAW DATA VAULT
+
+## Role in the BDI / FarmBlock Stack
+
+This repository is the **raw evidence vault** — source documents for the BDI empirical pipeline.
+
+- **Use this repository when**: Citing primary sources, auditing data lineage, adding new evidence
+- **Do not use this repository when**: You need synthesized analysis (→ bdi-sovereign-dataset) or narrative publication (→ bdi-black-paper)
+- **Upstream**: — (primary source)
+- **Downstream**: bdi-sovereign-dataset
+- **Status**: canonical
+
+See [STACK.md](STACK.md) for the full data stack crosswalk.
+
 ## Black Distress Index — Raw Evidence Archive v3.0
 **Publisher:** E5 Enclave Incorporated | EIN 99-3822441 | Liberty City, Miami, Florida
 **License:** CC0 1.0 Universal — Public Domain. No rights reserved. No attribution required.
